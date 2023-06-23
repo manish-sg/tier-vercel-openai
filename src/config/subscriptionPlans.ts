@@ -5,6 +5,7 @@ import { env } from "@/env.mjs";
 import { tier } from "@/lib/tier";
 
 const data: Model = await tier.pull();
+console.log("data", data)
 
 const freePlanTier = data.plans[env.TIER_FREE_PLAN_ID as PlanName];
 const startupPlanTier = data.plans[env.TIER_STARTUP_PLAN_ID as PlanName];
